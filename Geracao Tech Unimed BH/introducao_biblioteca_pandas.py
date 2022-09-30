@@ -1,5 +1,8 @@
 import pandas as pd
 
+def imprime_jogo_da_velha():
+    return print('###############')
+    
 # Lendo dados do csv
 data_frame = pd.read_csv('../datasets/Gapminder.csv', on_bad_lines='skip', sep=';')
 
@@ -8,8 +11,6 @@ d_f_r = data_frame.rename(
         columns={'country': 'País', 'continent': 'Continente', 'year': 'Ano', 'lifeExp': 'Expec. de vida', 'pop': 'Total pop.', 'gdpPercap': 'PIB'}
     )
 
-def imprime_jogo_da_velha():
-    return print('###############')
 
     # Total de linhas e colunas
 imprime_jogo_da_velha()
