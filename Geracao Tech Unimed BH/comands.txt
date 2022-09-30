@@ -1,0 +1,10 @@
+pip install -r requirements.txt
+pip install pandas
+pip install openpyxl
+pip install xlrd
+python -m pip install --upgrade pip
+pip install matplotlib
+
+git config --list | grep user
+git config --global user.name "Nome completo"
+git config --global user.email "email@atarb2b.com"
