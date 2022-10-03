@@ -19,7 +19,24 @@ data_frame = pd.concat([
 imprime_jogo_da_velha()
 print(data_frame['LojaID'].value_counts(ascending=False))
 
-# Grafico de barras
+# Comando para criar uma nova coluna 
 imprime_jogo_da_velha()
-data_frame['LojaID'].value_counts(ascending=False).plot.bar()
+data_frame['Receita'] = data_frame['Vendas'].mul(data_frame['Qtde'])
+print(data_frame.head())
+
+# Grafico impressos em tipos
+imprime_jogo_da_velha()
+# data_frame['LojaID'].value_counts(ascending=False).plot.bar() - Barra vertical
+# data_frame['LojaID'].value_counts(ascending=True).plot.barh(); - Barra horizontal ignorando a primeira, utilizado ponto e virgula
+# data_frame.groupby(data_frame['Data'].dt.year)['Receita'].sum().plot.pie() - Grafico de pizza
+# plt.show()
+
+# Total de vendas por cidade
+imprime_jogo_da_velha()
+print(data_frame['Cidade'].value_counts())
+
+imprime_jogo_da_velha()
+data_frame['Cidade'].value_counts().plot.bar(title='Total de vendas por Cidade', color='red')
+plt.xlabel('Cidade')
+plt.ylabel('Total Vendas')
 plt.show()
