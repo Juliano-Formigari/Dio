@@ -35,11 +35,6 @@ imprime_jogo_da_velha()
 data_frame['Ano_Venda'] = data_frame['Data'].dt.year
 print(data_frame.sample(5))
 
-# Criar uma nova coluna de Ano
-imprime_jogo_da_velha()
-data_frame['Ano_Venda'] = data_frame['Data'].dt.year
-print(data_frame.sample(5))
-
 # Criar uma nova de mês e dia
 imprime_jogo_da_velha()
 data_frame['mes_venda'], data_frame['dia_venda'] = data_frame['Data'].dt.month, data_frame['Data'].dt.day
